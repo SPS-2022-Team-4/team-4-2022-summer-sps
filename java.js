@@ -82,14 +82,14 @@ function item() {
         document.getElementById("describe").style.display = "none";
         document.getElementById("table").style.display = "none";
         var data = document.getElementById('userInput').value;
-    
+
         var index = data.indexOf(" and ")
         var data1 = data.substring(0, index);
         var data2 = data.substring(index + 5, data.length);
-    
+
         var xhttp = new XMLHttpRequest();
         var xhttp = new XMLHttpRequest();
-    
+
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 var response = JSON.parse(this.responseText);
@@ -100,15 +100,15 @@ function item() {
                 var fiber1 = item.fiber_g;
                 var fat1 = item.fat_total_g;
                 var cal1 = item.calories;
-    
+
                 var item2 = response.items[1];
                 var serving2 = item2.serving_size_g;
                 var sugar2 = item2.sugar_g;
                 var fiber2 = item2.fiber_g;
                 var fat2 = item2.fat_total_g;
                 var cal2 = item2.calories;
-    
-    
+
+
                 var sugar_d = sugar1 - sugar2;
                 sugar_d = sugar_d.toFixed(2);
                 var fiber_d = fiber1 - fiber2;
@@ -117,14 +117,14 @@ function item() {
                 fat_d = fat_d.toFixed(2);
                 var cal_d = cal1 - cal2;
                 cal_d = cal_d.toFixed(2);
-    
+
                 document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data1 + " and 100g " + data2 + " is " + sugar_d;
-    
+
                 document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data1 + " and 100g " + data2 + " is " + fiber_d;
                 document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data1 + " and 100g " + data2 + " is " + fat_d;
                 document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data1 + " and 100g " + data2 + " is " + cal_d;
-    
-    
+
+
             }
         };
         xhttp.open("GET", "https://api.calorieninjas.com/v1/nutrition?query=" + data1 + " and " + data2, true);
@@ -135,3 +135,5 @@ function item() {
 
 }
 
+
+document.querySelector('#call').addEventListener('click', item);
