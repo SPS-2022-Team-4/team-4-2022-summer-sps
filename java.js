@@ -2,7 +2,7 @@ function myFunction() {
     alert("There is no specific User. Everyone deserves a healthy life.");
 }
 
-let headers = ['sugar_g', 'fiber_g', 'servingSize_g', 'fat_g', 'calories_g'];
+let headers = ['servingSize_g', 'sugar_g', 'fiber_g', 'fat_g', 'calories_g'];
 let myTable = document.querySelector('#table');
 function item() {
     event.preventDefault();
@@ -24,9 +24,9 @@ function item() {
                 console.log(response);
                 // document.getElementsById("table").innerHTML = data + "is the food you want to check";
                 var item = response.items[0];
+                var serving = item.serving_size_g;
                 var sugar = item.sugar_g;
                 var fiber = item.fiber_g;
-                var serving = item.serving_size_g;
                 var fat = item.fat_total_g;
                 var cal = item.calories;
                 document.getElementById("describe").innerHTML = "Here is the nutrients in the " + data;
@@ -40,7 +40,7 @@ function item() {
                     heade_row.appendChild(header);
                 });
                 table.appendChild(heade_row);
-                let content = [{ sugar, fiber, serving, fat, cal }];
+                let content = [{ serving, sugar, fiber, fat, cal }];
                 content.forEach(emp => {
                     let row = document.createElement('tr');
                     Object.values(emp).forEach(text => {
@@ -95,16 +95,16 @@ function item() {
                 var response = JSON.parse(this.responseText);
                 console.log(response);
                 var item = response.items[0];
+                var serving1 = item.serving_size_g;
                 var sugar1 = item.sugar_g;
                 var fiber1 = item.fiber_g;
-                var serving1 = item.serving_size_g;
                 var fat1 = item.fat_total_g;
                 var cal1 = item.calories;
     
                 var item2 = response.items[1];
+                var serving2 = item2.serving_size_g;
                 var sugar2 = item2.sugar_g;
                 var fiber2 = item2.fiber_g;
-                var serving2 = item2.serving_size_g;
                 var fat2 = item2.fat_total_g;
                 var cal2 = item2.calories;
     
