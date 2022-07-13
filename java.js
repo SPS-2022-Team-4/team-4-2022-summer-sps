@@ -110,7 +110,9 @@ function item() {
 
 
                 var sugar_d = sugar1 - sugar2;
+
                 sugar_d = sugar_d.toFixed(2);
+                // sugar_d = sugar_d + "g";
                 var fiber_d = fiber1 - fiber2;
                 fiber_d = fiber_d.toFixed(2);
                 var fat_d = fat1 - fat2;
@@ -118,11 +120,176 @@ function item() {
                 var cal_d = cal1 - cal2;
                 cal_d = cal_d.toFixed(2);
 
-                document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data1 + " and 100g " + data2 + " is " + sugar_d;
+                // if (sugar_d > 0) {
+                //     document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data1 + " and 100g " + data2 + " is " + sugar_d;
+                // }
+                // else {
+                //     document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * sugar_d;
+                // }
+                // if (fiber_d > 0) {
+                //     document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data1 + " and 100g " + data2 + " is " + fiber_d;
+                // }
+                // else {
+                //     document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data2 + " and 100g " + data21 + " is " + -1 * fiber_d;
+                // }
+                // if (fat_d > 0) {
+                //     document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data1 + " and 100g " + data2 + " is " + fat_d;
+                // }
+                // else {
+                //     document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * fat_d;
+                // }
+                // if (cal_d > 0) {
+                //     document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data1 + " and 100g " + data2 + " is " + cal_d;
+                // }
+                // else {
+                //     document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * cal_d;
+                // }
 
-                document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data1 + " and 100g " + data2 + " is " + fiber_d;
-                document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data1 + " and 100g " + data2 + " is " + fat_d;
-                document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data1 + " and 100g " + data2 + " is " + cal_d;
+
+                // document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data1 + " and 100g " + data2 + " is " + sugar_d;
+
+                // document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data1 + " and 100g " + data2 + " is " + fiber_d;
+                // document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data1 + " and 100g " + data2 + " is " + fat_d;
+                // document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data1 + " and 100g " + data2 + " is " + cal_d;
+
+                if (sugar_d > 0) {
+                    if (fiber_d > 0) {
+                        if (fat_d > 0) {
+                            if (cal_d > 0) {
+                                document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data1 + " and 100g " + data2 + " is " + sugar_d + "g";
+
+                                document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data1 + " and 100g " + data2 + " is " + fiber_d + "g";
+                                document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data1 + " and 100g " + data2 + " is " + fat_d + "g";
+                                document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data1 + " and 100g " + data2 + " is " + cal_d + "cal";
+                            }
+                            else {
+                                document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data1 + " and 100g " + data2 + " is " + sugar_d + "g";
+
+                                document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data1 + " and 100g " + data2 + " is " + fiber_d + "g";
+                                document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data1 + " and 100g " + data2 + " is " + fat_d + "g";
+                                document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * cal_d + "cal";
+                            }
+                        }
+                        else {
+                            if (cal_d > 0) {
+                                document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data1 + " and 100g " + data2 + " is " + sugar_d + "g";
+
+                                document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data1 + " and 100g " + data2 + " is " + fiber_d + "g";
+                                document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * fat_d + "g";
+                                document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data1 + " and 100g " + data2 + " is " + cal_d + "cal";
+                            }
+                            else {
+                                document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data1 + " and 100g " + data2 + " is " + sugar_d + "g";
+
+                                document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data1 + " and 100g " + data2 + " is " + fiber_d + "g";
+                                document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * fat_d + "g";
+                                document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * cal_d + "cal";
+                            }
+                        }
+                    }
+                    else {
+                        if (fat_d > 0) {
+                            if (cal_d > 0) {
+                                document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data1 + " and 100g " + data2 + " is " + sugar_d + "g";
+
+                                document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * fiber_d + "g";
+                                document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data1 + " and 100g " + data2 + " is " + fat_d + "g";
+                                document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data1 + " and 100g " + data2 + " is " + cal_d + "cal";
+                            }
+                            else {
+                                document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data1 + " and 100g " + data2 + " is " + sugar_d + "g";
+
+
+                                document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * fiber_d + "g";
+                                document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data1 + " and 100g " + data2 + " is " + fat_d + "g";
+                                document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * cal_d + "cal";
+                            }
+                        }
+                        else {
+                            if (cal_d > 0) {
+                                document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data1 + " and 100g " + data2 + " is " + sugar_d + "g";
+
+                                document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * fiber_d + "g";
+                                document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * fat_d + "g";
+                                document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data1 + " and 100g " + data2 + " is " + cal_d + "cal";
+                            }
+                            else {
+                                document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data1 + " and 100g " + data2 + " is " + sugar_d + "g";
+                                document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * fiber_d + "g";
+                                document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * fat_d + "g";
+                                document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * cal_d + "cal";
+                            }
+                        }
+                    }
+
+                }
+                else if (sugar_d < 0) {
+                    if (fiber_d > 0) {
+                        if (fat_d > 0) {
+                            if (cal_d > 0) {
+                                document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * sugar_d + "g";
+
+                                document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data1 + " and 100g " + data2 + " is " + fiber_d + "g";
+                                document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data1 + " and 100g " + data2 + " is " + fat_d + "g";
+                                document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data1 + " and 100g " + data2 + " is " + cal_d + "cal";
+                            }
+                            else {
+                                document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * sugar_d + "g";
+
+                                document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data1 + " and 100g " + data2 + " is " + fiber_d + "g";
+                                document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data1 + " and 100g " + data2 + " is " + fat_d + "g";
+                                document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * cal_d + "cal";
+                            }
+                        }
+                        else {
+                            if (cal_d > 0) {
+                                document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * sugar_d + "g";
+
+                                document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data1 + " and 100g " + data2 + " is " + fiber_d + "g";
+                                document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * fat_d + "g";
+                                document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data1 + " and 100g " + data2 + " is " + cal_d + "cal";
+                            }
+                            else {
+                                document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * sugar_d + "g";
+                                document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data1 + " and 100g " + data2 + " is " + fiber_d + "g";
+                                document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * fat_d + "g";
+                                document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * cal_d + "cal";
+                            }
+                        }
+                    }
+                    else {
+                        if (fat_d > 0) {
+                            if (cal_d > 0) {
+                                document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * sugar_d + "g";
+                                document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * fiber_d + "g";
+                                document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data1 + " and 100g " + data2 + " is " + fat_d + "g";
+                                document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data1 + " and 100g " + data2 + " is " + cal_d + "cal";
+                            }
+                            else {
+                                document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * sugar_d + "g";
+
+
+                                document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * fiber_d + "g";
+                                document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data1 + " and 100g " + data2 + " is " + fat_d + "g";
+                                document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * cal_d + "cal";
+                            }
+                        }
+                        else {
+                            if (cal_d > 0) {
+                                document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * sugar_d + "g";
+                                document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * fiber_d + "g";
+                                document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * fat_d + "g";
+                                document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data1 + " and 100g " + data2 + " is " + cal_d + "cal";
+                            }
+                            else {
+                                document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * sugar_d + "g";
+                                document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * fiber_d + "g";
+                                document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * fat_d + "g";
+                                document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * cal_d + "cal";
+                            }
+                        }
+                    }
+                }
 
 
             }
