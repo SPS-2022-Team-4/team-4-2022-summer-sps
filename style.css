@@ -114,7 +114,7 @@
     padding-bottom: 10%;
 
     height: 40%;
-    background-color: rgb(238, 197, 216);
+    background-color: #eddddd;
 
 }
 
@@ -160,14 +160,15 @@
     width: 100%;
     height: 1600px;
     /* height: 90%; */
-    background-image: url("img/qaz.jpg");
+    /* background-image: url("img/qaz.jpg"); */
+    background-color: #eddddd;
     /* */
     /* opacity: 0.5; */
 
 }
 
 
-/* background-color: rgb(238, 202, 202); */
+/* backgound-color: rgb(238, 202, 202); */
 
 
 
@@ -246,7 +247,37 @@ input {
     text-transform: uppercase;
     cursor: pointer;
 }
+.button_recipe {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.img-fluid {
+    height: fit-content;
+}
+.recipe {
+    height: 10%;
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
 
+}
+.recipe_h1{
+   color: black; 
+}
+h1:hover {
+    text-decoration: none;
+}
 #describe {
     text-align: center;
     font-size: 50px;

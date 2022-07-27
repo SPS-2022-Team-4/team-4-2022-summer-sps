@@ -67,8 +67,10 @@ function item() {
         xhttp.open("GET", "https://api.calorieninjas.com/v1/nutrition?query=" + data, true);
         xhttp.setRequestHeader("x-api-key", "oRGaIB70hm/rSJDium33Ew==8AzrLddXw89GqIjX");
         xhttp.send();
+
         document.getElementById('userInput').value = "";
         document.getElementById("table").innerHTML = "";
+
     }
 
 
@@ -119,38 +121,6 @@ function item() {
                 fat_d = fat_d.toFixed(2);
                 var cal_d = cal1 - cal2;
                 cal_d = cal_d.toFixed(2);
-
-                // if (sugar_d > 0) {
-                //     document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data1 + " and 100g " + data2 + " is " + sugar_d;
-                // }
-                // else {
-                //     document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * sugar_d;
-                // }
-                // if (fiber_d > 0) {
-                //     document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data1 + " and 100g " + data2 + " is " + fiber_d;
-                // }
-                // else {
-                //     document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data2 + " and 100g " + data21 + " is " + -1 * fiber_d;
-                // }
-                // if (fat_d > 0) {
-                //     document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data1 + " and 100g " + data2 + " is " + fat_d;
-                // }
-                // else {
-                //     document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * fat_d;
-                // }
-                // if (cal_d > 0) {
-                //     document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data1 + " and 100g " + data2 + " is " + cal_d;
-                // }
-                // else {
-                //     document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data2 + " and 100g " + data1 + " is " + -1 * cal_d;
-                // }
-
-
-                // document.getElementById("showmessage2").innerHTML = "the sugar difference between 100g " + data1 + " and 100g " + data2 + " is " + sugar_d;
-
-                // document.getElementById("showmessage3").innerHTML = "the fiber difference between 100g " + data1 + " and 100g " + data2 + " is " + fiber_d;
-                // document.getElementById("showmessage4").innerHTML = "the fat difference between 100g " + data1 + " and 100g " + data2 + " is " + fat_d;
-                // document.getElementById("showmessage5").innerHTML = "the calory difference between 100g " + data1 + " and 100g " + data2 + " is " + cal_d;
 
                 if (sugar_d > 0) {
                     if (fiber_d > 0) {
@@ -298,6 +268,8 @@ function item() {
         xhttp.setRequestHeader("x-api-key", "oRGaIB70hm/rSJDium33Ew==8AzrLddXw89GqIjX");
         xhttp.send();
         document.getElementById('userInput').value = "";
+
+        
     }
 
 }
