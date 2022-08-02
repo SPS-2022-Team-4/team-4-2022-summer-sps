@@ -247,16 +247,19 @@ input {
     text-transform: uppercase;
     cursor: pointer;
 }
+
 .button_recipe {
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
+
 .img-fluid {
     height: fit-content;
 }
+
 .recipe {
     height: 10%;
     width: 100%;
@@ -272,12 +275,15 @@ input {
     align-items: center;
 
 }
-.recipe_h1{
-   color: black; 
+
+.recipe_h1 {
+    color: black;
 }
+
 h1:hover {
     text-decoration: none;
 }
+
 #describe {
     text-align: center;
     font-size: 50px;
@@ -290,8 +296,8 @@ h1:hover {
     justify-content: center;
     align-items: center; */
     font-size: 35px;
-    color: #f0f0f0;
-    margin-top: 3%;
+    color: #838383;
+    margin-top: 1.5%;
     font-weight: 900;
 }
 
@@ -302,7 +308,7 @@ h1:hover {
     justify-content: center;
     align-items: center; */
     font-size: 35px;
-    color: #f0f0f0;
+    color: #837d7d;
     margin-top: 3%;
     font-weight: 900;
 }
@@ -313,7 +319,7 @@ h1:hover {
     justify-content: center;
     align-items: center; */
     font-size: 35px;
-    color: #f0f0f0;
+    color: #837d7d;
     margin-top: 3%;
     font-weight: 900;
 }
@@ -324,7 +330,7 @@ h1:hover {
     justify-content: center;
     align-items: center; */
     font-size: 35px;
-    color: #f0f0f0;
+    color: #837d7d;
     margin-top: 3%;
     font-weight: 900;
 }
@@ -335,10 +341,15 @@ h1:hover {
     justify-content: center;
     align-items: center; */
     font-size: 35px;
-    color: #f0f0f0;
+    color: #837d7d;
     margin-top: 3%;
     font-weight: 900;
 }
+
+/* 
+#rr {
+    margin-top: 10%;
+} */
 
 
 #table {

@@ -13,9 +13,11 @@ function item() {
         document.getElementById("showmessage4").style.display = "none";
         document.getElementById("showmessage5").style.display = "none";
         document.getElementById("showmessage").style.display = "block";
+        document.getElementById("rr").style.marginTop = "4%";
         document.getElementById("call").style.display = "block";
         document.getElementById("describe").style.display = "block";
         document.getElementById("table").style.display = "flex";
+
         var xhttp = new XMLHttpRequest();
 
         xhttp.onreadystatechange = function () {
@@ -80,7 +82,7 @@ function item() {
         document.getElementById("showmessage4").style.display = "block";
         document.getElementById("showmessage5").style.display = "block";
         document.getElementById("showmessage").style.display = "none";
-        // document.getElementById("call").style.display = "none";
+        document.getElementById("rr").style.marginTop = "10%";
         document.getElementById("describe").style.display = "none";
         document.getElementById("table").style.display = "none";
         var data = document.getElementById('userInput').value;
@@ -269,7 +271,7 @@ function item() {
         xhttp.send();
         document.getElementById('userInput').value = "";
 
-        
+
     }
 
 }
