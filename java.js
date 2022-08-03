@@ -82,7 +82,7 @@ function item() {
         document.getElementById("showmessage4").style.display = "block";
         document.getElementById("showmessage5").style.display = "block";
         document.getElementById("showmessage").style.display = "none";
-        document.getElementById("rr").style.marginTop = "10%";
+       document.getElementById("rr").style.marginTop = "10%";
         document.getElementById("describe").style.display = "none";
         document.getElementById("table").style.display = "none";
         var data = document.getElementById('userInput').value;
