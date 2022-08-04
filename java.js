@@ -67,7 +67,7 @@ function item() {
 
         };
         xhttp.open("GET", "https://api.calorieninjas.com/v1/nutrition?query=" + data, true);
-        xhttp.setRequestHeader("x-api-key", "oRGaIB70hm/rSJDium33Ew==8AzrLddXw89GqIjX");
+        xhttp.setRequestHeader("x-api-key", "lfzjRQQvHP49RRq2PEm3hQ==3wUQjZWNmzvY3Usd");
         xhttp.send();
 
         document.getElementById('userInput').value = "";
@@ -82,7 +82,7 @@ function item() {
         document.getElementById("showmessage4").style.display = "block";
         document.getElementById("showmessage5").style.display = "block";
         document.getElementById("showmessage").style.display = "none";
-       document.getElementById("rr").style.marginTop = "10%";
+        document.getElementById("rr").style.marginTop = "10%";
         document.getElementById("describe").style.display = "none";
         document.getElementById("table").style.display = "none";
         var data = document.getElementById('userInput').value;
@@ -267,7 +267,7 @@ function item() {
             }
         };
         xhttp.open("GET", "https://api.calorieninjas.com/v1/nutrition?query=" + data1 + " and " + data2, true);
-        xhttp.setRequestHeader("x-api-key", "oRGaIB70hm/rSJDium33Ew==8AzrLddXw89GqIjX");
+        xhttp.setRequestHeader("x-api-key", "lfzjRQQvHP49RRq2PEm3hQ==3wUQjZWNmzvY3Usd");
         xhttp.send();
         document.getElementById('userInput').value = "";
 
